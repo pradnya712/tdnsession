@@ -1,4 +1,4 @@
-package tdnsession.techdenovo.com;
+package practise.techdenovo.com;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
