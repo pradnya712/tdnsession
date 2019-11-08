@@ -37,6 +37,25 @@ public class UserInput {
                     break;
                 case "U":
                     System.out.println("U. User");
+                    String emailid="";
+                    try {
+                    	System.out.println("Entry email id");
+                    	emailid=( new BufferedReader(new InputStreamReader(System.in)).readLine());
+                    	int num=emailid.indexOf("@");
+                    	String firstpart=emailid.substring(0,num);
+                    	System.out.println(firstpart);
+                    	String domaiName=emailid.substring(num+1);
+                    	if(domaiName.equalsIgnoreCase(domain.getDomainName()))
+                    	{
+                    		System.out.println("successful");
+                    	}else {
+                    		System.out.println("only allowed gmail.com");
+                    	}
+                       }
+                    catch (Exception e) {
+                        System.out.println(e);
+                    }
+                    
                     break;
                 case "E":
                     System.out.println("E.Exit");
@@ -44,7 +63,7 @@ public class UserInput {
                 default:
                     break;
             }
-            System.out.println(domain.getDomainName());
+            //System.out.println(" line 60"+domain.getDomainName());
         }
     }
 }
